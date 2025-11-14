@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://c2ymmjls70fik"]
+
+[ext_resource type="PackedScene" uid="uid://b5lc1byyckqsy" path="res://assests/scenes/coin.tscn" id="1_4eaa8"]
+[ext_resource type="Texture2D" uid="uid://cd2rsdel5r21m" path="res://assests/sprites/coin5-removebg-preview.png" id="2_ri6kb"]
+[ext_resource type="Texture2D" uid="uid://dlhc8fqym0afi" path="res://assests/sprites/coin4-removebg-preview.png" id="3_alcm1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q180e"]
+atlas = ExtResource("2_ri6kb")
+region = Rect2(5, 0, 144, 469)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_df1sq"]
+atlas = ExtResource("2_ri6kb")
+region = Rect2(147, 0, 114, 469)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etaxc"]
+atlas = ExtResource("2_ri6kb")
+region = Rect2(251, 0, 46, 469)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5kab"]
+atlas = ExtResource("2_ri6kb")
+region = Rect2(297, 0, 46, 469)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eljk0"]
+atlas = ExtResource("2_ri6kb")
+region = Rect2(343, 0, 46, 469)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjp8l"]
+atlas = ExtResource("3_alcm1")
+region = Rect2(397, 0, 135, 469)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oyknp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q180e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_df1sq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etaxc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5kab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eljk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjp8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eljk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5kab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etaxc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_df1sq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Coin" instance=ExtResource("1_4eaa8")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(2, -29)
+scale = Vector2(0.3827465, 0.37443042)
+sprite_frames = SubResource("SpriteFrames_oyknp")
+frame = 5
+frame_progress = 0.6312634

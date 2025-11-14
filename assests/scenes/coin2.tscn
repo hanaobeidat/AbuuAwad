@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://7msto74a0mdo"]
+
+[ext_resource type="Texture2D" uid="uid://dxsva0fqsrls8" path="res://assests/sprites/coin2-removebg-preview.png" id="1_6af7r"]
+[ext_resource type="PackedScene" uid="uid://b5lc1byyckqsy" path="res://assests/scenes/coin.tscn" id="1_l2kac"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6x1mf"]
+atlas = ExtResource("1_6af7r")
+region = Rect2(0, 0, 119, 469)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvunv"]
+atlas = ExtResource("1_6af7r")
+region = Rect2(112, 0, 101, 469)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgt4o"]
+atlas = ExtResource("1_6af7r")
+region = Rect2(214, 0, 107, 469)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ig2wy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6x1mf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvunv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgt4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvunv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6x1mf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Coin" instance=ExtResource("1_l2kac")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(5, -27)
+scale = Vector2(0.4728803, 0.4383963)
+sprite_frames = SubResource("SpriteFrames_ig2wy")
+frame = 3
+frame_progress = 0.69405943

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://xcl47tusmd3o"]
+
+[ext_resource type="Texture2D" uid="uid://do0k0eu8xpirx" path="res://assests/sprites/bus-removebg-preview.png" id="1_ba0x2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ba0x2"]
+size = Vector2(448.5095, 189.27182)
+
+[node name="Platform" type="AnimatableBody2D"]
+z_index = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(13, -38)
+scale = Vector2(0.738, 0.7238267)
+texture = ExtResource("1_ba0x2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10.500004, -50.5)
+scale = Vector2(0.738, 0.7238267)
+shape = SubResource("RectangleShape2D_ba0x2")
